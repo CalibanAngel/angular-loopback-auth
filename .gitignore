@@ -2,3 +2,5 @@ node_modules/
 typings/
 shared/
 *.log
+app/*.js
+app/*.js.map
