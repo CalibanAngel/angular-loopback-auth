@@ -13,7 +13,7 @@ var users = [
 ];
 
 @Injectable()
-export class AuthenticationService {
+export class UserService {
     constructor(
         private _router: Router
     ) {}
