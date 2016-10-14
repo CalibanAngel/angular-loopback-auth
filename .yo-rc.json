@@ -1,0 +1,7 @@
+{
+  "generator-angular2-quickstart": {
+    "appName": "angular-loopback-auth",
+    "selectorName": "my-app",
+    "appAuthor": ""
+  }
+}
