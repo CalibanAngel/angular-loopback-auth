@@ -20,18 +20,21 @@ export class AuthenticationService {
 
     login(user) {
         var authenticatedUser = users.find(u => u.email === user.email);
-        if (authenticatedUser && authenticatedUser.password === user.password) {
-            this._router.navigate(['welcome']);
+        if (authenticatedUser && authenticatedUser.password === user.password) { //check user
+            //must add the user to DB
+            this._router.navigate(['Home']);
             return true;
         }
         return false;
     }
 
-    logout(user) {
+    logout() {
+        //must remove the user from DB
         this._router.navigate(['Login']);
     }
 
     checkLogin() {
+        //must check if user is login
         this._router.navigate(['Login']);
     }
 

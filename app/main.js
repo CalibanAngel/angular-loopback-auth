@@ -1,5 +1,6 @@
 "use strict";
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
-var my_app_component_1 = require('./my-app.component');
-platform_browser_dynamic_1.bootstrap(my_app_component_1.AngularloopbackauthComponent);
+var app_component_1 = require('./app.component');
+var router_1 = require('@angular/router');
+platform_browser_dynamic_1.bootstrap(app_component_1.AppComponent, [router_1.ROUTER_PROVIDERS]);
 //# sourceMappingURL=main.js.map

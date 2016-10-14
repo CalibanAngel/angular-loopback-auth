@@ -9,17 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AngularloopbackauthComponent = (function () {
-    function AngularloopbackauthComponent() {
+var login_form_component_1 = require('./login-form.component');
+var router_1 = require('@angular/router');
+var AppComponent = (function () {
+    function AppComponent() {
     }
-    AngularloopbackauthComponent = __decorate([
+    AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>My First Angular 2 App</h1>'
-        }), 
+            directives: [login_form_component_1.LoginFormComponent, router_1.ROUTER_DIRECTIVES],
+            template: "\n            <router-outlet></router-outlet>\n        "
+        }),
+        router_1.RouteConfig([
+            { path: '/login', name: 'Login', component: login_form_component_1.LoginFormComponent }
+        ]), 
         __metadata('design:paramtypes', [])
-    ], AngularloopbackauthComponent);
-    return AngularloopbackauthComponent;
+    ], AppComponent);
+    return AppComponent;
 }());
-exports.AngularloopbackauthComponent = AngularloopbackauthComponent;
-//# sourceMappingURL=my-app.component.js.map
+exports.AppComponent = AppComponent;
+//  { path: '/home', name: 'Home', component: PrivateComponent, useAsDefault:true },
+//# sourceMappingURL=app.component.js.map

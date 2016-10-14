@@ -29,15 +29,18 @@ var AuthenticationService = (function () {
     AuthenticationService.prototype.login = function (user) {
         var authenticatedUser = users.find(function (u) { return u.email === user.email; });
         if (authenticatedUser && authenticatedUser.password === user.password) {
-            this._router.navigate(['welcome']);
+            //must add the user to DB
+            this._router.navigate(['Home']);
             return true;
         }
         return false;
     };
-    AuthenticationService.prototype.logout = function (user) {
+    AuthenticationService.prototype.logout = function () {
+        //must remove the user from DB
         this._router.navigate(['Login']);
     };
     AuthenticationService.prototype.checkLogin = function () {
+        //must check if user is login
         this._router.navigate(['Login']);
     };
     AuthenticationService = __decorate([
